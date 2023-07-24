@@ -11,10 +11,11 @@ void initialize(){
 
 int main(){
     initialize();
-    Vector2 ballPosition={225.0f, 750.0f};
+    Vector2 playerPosition={225.0f, 750.0f};
+    struct Player player = initializePlayer(99,"player.png");
     while(!WindowShouldClose()){
-        //ballPosition = GetMousePosition();
-        drawPlayer(ballPosition);
+        playerPosition = GetMousePosition();
+        drawPlayer(player,playerPosition);
     }
     CloseWindow();
 }
